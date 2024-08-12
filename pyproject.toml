@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "sentinel"
+version = "0.1.0"
+description = "Sentinel is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications."
+authors = ["Rich Ramalho <richecr1799@gmail.com>"]
+maintainers = ["Rich Ramalho <richecr1799@gmail.com>"]
+homepage = "https://github.com/richecr/sentinel"
+repository = "https://github.com/richecr/sentinel"
+documentation = "https://github.com/richecr/sentinel"
+keywords = ["test", "ent-2-end", "unit tests", "assert", "equal", "ensure", "validation", "python"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+sentinel_ = "sentinel.cli.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+rich = "^13.7.1"
+typer = "^0.12.3"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.6"
+mypy = "^1.11.1"
+
+[tool.mypy]
+exclude = ["tests", "venv", "env"]
+strict = true
+warn_no_return = false
+
+[tool.mypy-test]
+ignore_errors = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

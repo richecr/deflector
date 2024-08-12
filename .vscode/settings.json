@@ -1,0 +1,14 @@
+{
+  "python.defaultInterpreterPath": "/home/richecr/.cache/pypoetry/virtualenvs/sentinel-gUnc7X8W-py3.12/bin/python",
+  "ruff.lint.args": ["--config=/home/richecr/projects/sentinel/ruff.toml"],
+  "ruff.format.args": ["--config=/home/richecr/projects/sentinel/ruff.toml"],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "mypy.configFile": "/home/richecr/projects/sentinel/ruff.toml"
+}
