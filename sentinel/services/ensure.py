@@ -1,52 +1,11 @@
-import inspect
 import re
-from dataclasses import dataclass
-from typing import Any, Callable, Coroutine, NotRequired, Optional, TypedDict
+from typing import Any, Callable
 
 from sentinel import console
 from sentinel.config.identation import identation
-
-
-class MyAssertionError(AssertionError):
-    def __init__(
-        self, expected: Any = None, actual: Any = None, message: str = "", operator: str = "=="
-    ) -> None:
-        self.expected = expected
-        self.actual = actual
-        self.message = message
-        self.operator = operator
-        super().__init__(message)
-
-
-@dataclass
-class EnsureFuncs:
-    ok: Callable[[Any, str], None]
-    equal: Callable[[Any, Any, str], None]
-    not_equal: Callable[[Any, Any, str], None]
-    match_re: Callable[[Any, str | re.Pattern[str], str], None]
-    does_not_match_re: Callable[[Any, str | re.Pattern[str], str], None]
-    equal_async: Optional[Callable[[Any, Any, str], Coroutine[Any, Any, None]]] = None
-
-
-@dataclass
-class ProcessGuaranteeOptions(TypedDict):
-    message: NotRequired[str]
-    default_message: NotRequired[str]
-    actual: NotRequired[Any]
-    expected: NotRequired[Any]
-    raise_error: NotRequired[bool]
-    hide_diff: NotRequired[bool]
-
-
-def get_caller() -> tuple[str | None, int | None]:
-    stack = inspect.stack()
-    for frame in stack:
-        if "sentinel/sentinel" not in frame.filename:  # Ignora arquivos da lib Sentinel
-            filename = frame.filename
-            line = frame.lineno
-            return filename, line
-
-    return None, None
+from sentinel.models.assertion import MyAssertionError
+from sentinel.models.ensure import EnsureFuncs, ProcessGuaranteeOptions
+from sentinel.utils.errors import get_caller
 
 
 def process(func: Callable[[], None], options: ProcessGuaranteeOptions) -> None:
@@ -84,49 +43,39 @@ def process(func: Callable[[], None], options: ProcessGuaranteeOptions) -> None:
 
 def create_ensure() -> EnsureFuncs:
     def ok(value: Any, message: str = "") -> None:
-        msg = f"Operator: ==\nValue:\n{value}\nExpected:\nTrue"
-
         def cb() -> None:
             if not value:
-                raise MyAssertionError(expected="True", actual=value, message=msg, operator="==")
+                raise MyAssertionError(expected="True", actual=value, operator="==")
 
         process(cb, {"message": message})
 
     def equal(value: Any, expected: Any, message: str = "") -> None:
-        msg = f"Operator: ==\nValue:\n{value}\nExpected:\n{expected}"
-
         def cb() -> None:
             if value != expected:
-                raise MyAssertionError(expected, value, msg, operator="==")
+                raise MyAssertionError(expected, value, operator="==")
 
         process(cb, {"message": message})
 
     def not_equal(value: Any, expected: Any, message: str = "") -> None:
-        msg = f"Operator: !=\nValue:\n{value}\nExpected:\n{expected}"
-
         def cb() -> None:
             if value == expected:
-                raise MyAssertionError(expected, value, msg, operator="!=")
+                raise MyAssertionError(expected, value, operator="!=")
 
         process(cb, {"message": message})
 
     def match_re(value: Any, reg_exp: str | re.Pattern[str], message: str = "") -> None:
-        msg = f"Operator: match_re\nValue:\n{value}\nRegExp:\n{reg_exp}"
-
         def cb() -> None:
             matchs = re.search(reg_exp, value)
             if not matchs:
-                raise MyAssertionError(reg_exp, value, msg, operator="match_re")
+                raise MyAssertionError(reg_exp, value, operator="match_re")
 
         process(cb, {"message": message})
 
     def does_not_match_re(value: Any, reg_exp: str | re.Pattern[str], message: str = "") -> None:
-        msg = f"Operator: does_not_match_re\n{value}\nRegExp:\n{reg_exp}"
-
         def cb() -> None:
             matchs = re.search(reg_exp, value)
             if matchs:
-                raise MyAssertionError(reg_exp, value, msg, operator="does_not_match_re")
+                raise MyAssertionError(reg_exp, value, operator="does_not_match_re")
 
         process(cb, {"message": message})
 
