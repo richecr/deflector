@@ -1,3 +1,4 @@
+import inspect
 import re
 from dataclasses import dataclass
 from typing import Any, Callable, Coroutine, NotRequired, Optional, TypedDict
@@ -37,6 +38,17 @@ class ProcessGuaranteeOptions(TypedDict):
     hide_diff: NotRequired[bool]
 
 
+def get_caller() -> tuple[str | None, int | None]:
+    stack = inspect.stack()
+    for frame in stack:
+        if "sentinel/sentinel" not in frame.filename:  # Ignora arquivos da lib Sentinel
+            filename = frame.filename
+            line = frame.lineno
+            return filename, line
+
+    return None, None
+
+
 def process(func: Callable[[], None], options: ProcessGuaranteeOptions) -> None:
     pre_identation = ""
     if identation.hasDescribe:
@@ -53,11 +65,20 @@ def process(func: Callable[[], None], options: ProcessGuaranteeOptions) -> None:
 
     except MyAssertionError as err:
         console.print_error(f"{pre_identation}✘ {options['message']}")
+        file, line = get_caller()
+        if line and file:
+            console.print_info(f"{pre_identation}  File {file}, line {line}")
+
         console.print_info(f"{pre_identation}  Operator {err.operator}")
         console.print_info(f"{pre_identation}  Actual:")
         console.print_error(f"{pre_identation}  {err.actual}")
-        console.print_info(f"{pre_identation}  Expected:")
+
+        if "match_re" in err.operator:
+            console.print_info(f"{pre_identation}  RegExp:")
+        else:
+            console.print_info(f"{pre_identation}  Expected:")
         console.print_success(f"{pre_identation}  {err.expected}")
+
         raise err
 
 
