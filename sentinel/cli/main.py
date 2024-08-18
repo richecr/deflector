@@ -11,7 +11,7 @@ app = typer.Typer()
 
 
 @app.command()
-def main(dir: str = "tests") -> None:
+def main(dir: str = "tests", stderr: int = subprocess.DEVNULL) -> None:
     typer.echo(f"Running tests in directory: {dir}")
 
     path_to_tests = Path(dir).resolve()
@@ -31,7 +31,7 @@ def main(dir: str = "tests") -> None:
         counter += 1
         out_text = f"{counter}/{total_files}: {path}"
         try:
-            subprocess.run(["python", file], check=True)
+            subprocess.run(["python", file], check=True, stderr=stderr)
             console.print_success(f"✔ {out_text}")
         except Exception:
             console.print_error(f"✘ {out_text}")
