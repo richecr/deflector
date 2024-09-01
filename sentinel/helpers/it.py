@@ -1,4 +1,3 @@
-import asyncio
 import time
 from functools import wraps
 from typing import Any, Callable, Coroutine, Union
@@ -6,6 +5,7 @@ from typing import Any, Callable, Coroutine, Union
 from sentinel import console
 from sentinel.config.each import each
 from sentinel.config.identation import identation
+from sentinel.utils.execute_function import execute
 
 
 def it(
@@ -24,13 +24,10 @@ def it(
                 console.print_info(f"{pre_identation}◌ {msg} › Running...")
 
                 if each.before.cb:
-                    each.before.cb()
+                    execute(each.before.cb)
 
                 start = time.time_ns()
-                if asyncio.iscoroutinefunction(func):
-                    asyncio.run(func())
-                else:
-                    func()
+                execute(func)
                 end = time.time_ns()
 
                 console.print_success(
@@ -43,7 +40,7 @@ def it(
                 identation.hasItOrTest = False
 
                 if each.after.cb:
-                    each.after.cb()
+                    execute(each.after.cb)
 
         wrapped_func()
 
