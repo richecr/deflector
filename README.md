@@ -1,5 +1,5 @@
 <div align="center">
-<img height="180" alt="Sentinel Logo" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/logo.png">
+<img height="180" alt="Sentinel Logo" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/logo.png?token=GHSAT0AAAAAACUXVD5PS2OG2TWFS5JTCPQSZWVD4SA">
 
 # Sentinel
 
@@ -15,15 +15,15 @@
 
 💡 **Sentinel** is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications.
 
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/check.svg"> High **isolation** level per file<br />
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/check.svg"> **Performant** and **lightweight**<br />
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/check.svg"> **Performant** and **lightweight**<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> High **isolation** level per file<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Performant** and **lightweight**<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Performant** and **lightweight**<br />
 
 ---
 
 ## Quickstart
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/check.svg"> Install
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Install
 
 
 ```zsh
@@ -38,7 +38,7 @@ poetry add sentinel -G dev
 
 ---
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/check.svg"> Test
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Test
 
 <table>
 <tr>
@@ -62,7 +62,7 @@ affirm.equal(1, 1, "My first test with sentinel")
 
 ---
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/check.svg"> Run
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Run
 
 
 ```bash
