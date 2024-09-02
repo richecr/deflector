@@ -7,8 +7,8 @@ maintainers = ["Rich Ramalho <richecr1799@gmail.com>"]
 homepage = "https://github.com/richecr/sentinel"
 repository = "https://github.com/richecr/sentinel"
 documentation = "https://github.com/richecr/sentinel"
-keywords = ["test", "ent-2-end", "unit tests", "assert", "equal", "ensure", "validation", "python"]
-license = "MIT"
+keywords = ["test", "ent-2-end", "unit tests", "assert", "equal", "ensure", "affirm", "validation", "python"]
+license = "LICENSE"
 readme = "README.md"
 
 [tool.poetry.scripts]
