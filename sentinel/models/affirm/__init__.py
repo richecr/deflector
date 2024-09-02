@@ -4,7 +4,7 @@ from typing import Any, Callable, Coroutine, NotRequired, Optional, TypedDict
 
 
 @dataclass
-class EnsureFuncs:
+class AffirmFuncs:
     ok: Callable[[Any, str], None]
     equal: Callable[[Any, Any, str], None]
     not_equal: Callable[[Any, Any, str], None]

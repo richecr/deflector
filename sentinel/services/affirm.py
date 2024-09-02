@@ -3,8 +3,8 @@ from typing import Any, Callable
 
 from sentinel import console
 from sentinel.config.identation import identation
+from sentinel.models.affirm import AffirmFuncs, ProcessGuaranteeOptions
 from sentinel.models.assertion import MyAssertionError
-from sentinel.models.ensure import EnsureFuncs, ProcessGuaranteeOptions
 from sentinel.utils.errors import get_caller
 
 
@@ -41,7 +41,7 @@ def process(func: Callable[[], None], options: ProcessGuaranteeOptions) -> None:
         raise err
 
 
-def create_ensure() -> EnsureFuncs:
+def create_affirm() -> AffirmFuncs:
     def ok(value: Any, message: str = "") -> None:
         def cb() -> None:
             if not value:
@@ -79,7 +79,7 @@ def create_ensure() -> EnsureFuncs:
 
         process(cb, {"message": message})
 
-    return EnsureFuncs(
+    return AffirmFuncs(
         ok=ok,
         equal=equal,
         not_equal=not_equal,
