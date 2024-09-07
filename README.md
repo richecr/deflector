@@ -100,9 +100,9 @@ from sentinel import affirm
 | Function                                   | Description                                  |
 |--------------------------------------------|----------------------------------------------|
 | [ok](#ok)                                  | Checks if a value is truthy.                 |
-| [equal](#equal)                            | Compares if two values are equal.            |
-| [not_equal](#not_equal)                    | Verifies if two values are different.        |
-| [match_re](#match_re)                      | Checks if a string matches a regex.          |
+| [equal](#equals)                           | Compares if two values are equal.            |
+| [not_equal](#not-equals)                   | Verifies if two values are different.        |
+| [match_re](#match-regex)                   | Checks if a string matches a regex.          |
 | [does_not_match_re](#does-not-match-regex) | Verifies if a string does not match a regex. |
 
 ##### Ok
