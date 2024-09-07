@@ -1,10 +1,10 @@
 import asyncio
 
+from sentinel import affirm
 from sentinel.helpers.after_each import after_each
 from sentinel.helpers.before_each import before_each
 from sentinel.helpers.describe import describe
 from sentinel.helpers.it import it
-from sentinel.modules.essentials.affirm import affirm
 
 
 async def main() -> int:

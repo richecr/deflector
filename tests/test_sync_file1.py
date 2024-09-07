@@ -1,6 +1,4 @@
-from sentinel.helpers.describe import describe
-from sentinel.helpers.it import it
-from sentinel.modules.essentials.affirm import affirm
+from sentinel import affirm, describe, it
 
 
 def main() -> int:

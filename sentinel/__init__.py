@@ -26,3 +26,7 @@ class MyConsole(Console):
 
 
 console = MyConsole({"color_system": "standard"})
+
+from sentinel.modules import affirm, after_each, before_each, describe, it  # noqa: E402
+
+__all__ = ["console", "affirm", "after_each", "before_each", "describe", "it"]
