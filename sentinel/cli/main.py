@@ -35,3 +35,4 @@ def main(dir: str = "tests", stderr: int = subprocess.DEVNULL) -> None:
             console.print_success(f"✔ {out_text}")
         except Exception:
             console.print_error(f"✘ {out_text}")
+            raise typer.Exit(code=1)

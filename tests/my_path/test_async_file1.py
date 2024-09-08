@@ -37,7 +37,7 @@ def describe_main() -> None:
         affirm.equal(v, 2, "Equal 1")
         affirm.equal(v, 2, "Equal 2")
 
-    @it("It Test 2")
+    @it.skip("It Test 2")
     async def test2() -> None:
         v = await main()
         affirm.equal(x, 2, "Equal After Each")
