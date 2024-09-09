@@ -1,1 +1,0 @@
-from sentinel.models.assertion.assertion_error import MyAssertionError as MyAssertionError

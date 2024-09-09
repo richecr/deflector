@@ -5,7 +5,7 @@ from typing import List
 
 import typer
 
-from sentinel import console
+from deflector import console
 
 app = typer.Typer()
 

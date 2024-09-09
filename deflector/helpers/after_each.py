@@ -1,9 +1,9 @@
 from functools import wraps
 from typing import Any, Callable, Coroutine, Union
 
-from sentinel.config.each import each
-from sentinel.models.each import Each
-from sentinel.utils.execute_function import execute
+from deflector.config.each import each
+from deflector.models.each import Each
+from deflector.utils.execute_function import execute
 
 
 def after_each() -> Callable[[Callable[[], Any]], None]:

@@ -2,8 +2,8 @@ from dataclasses import dataclass
 from functools import wraps
 from typing import Any, Callable, Coroutine, Union
 
-from sentinel.config.each import each
-from sentinel.utils.execute_function import execute
+from deflector.config.each import each
+from deflector.utils.execute_function import execute
 
 
 @dataclass

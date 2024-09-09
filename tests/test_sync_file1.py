@@ -1,4 +1,4 @@
-from sentinel import affirm, describe, it
+from deflector import affirm, describe, it
 
 
 def main() -> int:

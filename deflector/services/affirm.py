@@ -1,11 +1,11 @@
 import re
 from typing import Any, Callable
 
-from sentinel import console
-from sentinel.config.identation import identation
-from sentinel.models.affirm import AffirmFuncs, ProcessGuaranteeOptions
-from sentinel.models.assertion import MyAssertionError
-from sentinel.utils.errors import get_caller
+from deflector import console
+from deflector.config.identation import identation
+from deflector.models.affirm import AffirmFuncs, ProcessGuaranteeOptions
+from deflector.models.assertion import MyAssertionError
+from deflector.utils.errors import get_caller
 
 
 def process(func: Callable[[], None], options: ProcessGuaranteeOptions) -> None:

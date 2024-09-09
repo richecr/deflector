@@ -2,7 +2,7 @@ from typing import Any
 
 from rich.console import Console
 
-from sentinel.utils.colors import Color
+from deflector.utils.colors import Color
 
 
 class MyConsole(Console):
@@ -27,6 +27,6 @@ class MyConsole(Console):
 
 console = MyConsole({"color_system": "standard"})
 
-from sentinel.modules import affirm, after_each, before_each, describe, it  # noqa: E402
+from deflector.modules import affirm, after_each, before_each, describe, it  # noqa: E402
 
 __all__ = ["console", "affirm", "after_each", "before_each", "describe", "it"]

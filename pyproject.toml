@@ -1,18 +1,18 @@
 [tool.poetry]
-name = "sentinel"
+name = "deflector"
 version = "0.1.0"
-description = "Sentinel is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications."
+description = "Deflector is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications."
 authors = ["Rich Ramalho <richecr1799@gmail.com>"]
 maintainers = ["Rich Ramalho <richecr1799@gmail.com>"]
-homepage = "https://github.com/richecr/sentinel"
-repository = "https://github.com/richecr/sentinel"
-documentation = "https://github.com/richecr/sentinel"
+homepage = "https://github.com/richecr/deflector"
+repository = "https://github.com/richecr/deflector"
+documentation = "https://github.com/richecr/deflector"
 keywords = ["test", "ent-2-end", "unit tests", "assert", "equal", "ensure", "affirm", "validation", "python"]
 license = "LICENSE"
 readme = "README.md"
 
 [tool.poetry.scripts]
-sentinel = "sentinel.cli.main:app"
+deflector = "deflector.cli.main:app"
 
 [tool.poetry.dependencies]
 python = "^3.12"

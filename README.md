@@ -1,7 +1,7 @@
 <div align="center">
-<img height="180" alt="Sentinel Logo" src="https://raw.githubusercontent.com/richecr/sentinel/main/.github/assets/readme/logo.png?token=GHSAT0AAAAAACUXVD5PS2OG2TWFS5JTCPQSZWVD4SA">
+<img height="180" alt="deflector Logo" src="https://raw.githubusercontent.com/richecr/deflector/main/.github/assets/readme/logo.png?token=GHSAT0AAAAAACUXVD5PS2OG2TWFS5JTCPQSZWVD4SA">
 
-# Sentinel
+# Deflector
 
 ---
 
@@ -11,34 +11,34 @@
 
 ---
 
-## Why does Sentinel exist?
+## Why does Deflector exist?
 
-💡 **Sentinel** is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications.
+💡 **Deflector** is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications.
 
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> High **isolation** level per file<br />
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Performant** and **lightweight**<br />
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Fully typed** library<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> High **isolation** level per file<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Performant** and **lightweight**<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Fully typed** library<br />
 
 ---
 
 ## Quickstart
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Install
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Install
 
 
 ```zsh
-$ pip install sentinel
+$ pip install deflector
 ```
 
 Or with [poetry](https://python-poetry.org/docs/)
 
 ```zsh
-poetry add sentinel -G dev
+poetry add deflector -G dev
 ```
 
 ---
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Test
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Test
 
 <table>
 <tr>
@@ -50,10 +50,10 @@ poetry add sentinel -G dev
 <td width="1200">
 
 ```py
-from sentinel.modules.essentials.affirm import affirm
+from deflector.modules.essentials.affirm import affirm
 
 
-affirm.equal(1, 1, "My first test with sentinel")
+affirm.equal(1, 1, "My first test with deflector")
 ```
 
 </td>
@@ -62,24 +62,24 @@ affirm.equal(1, 1, "My first test with sentinel")
 
 ---
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Run
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Run
 
 
 ```bash
-sentinel # or poetry run sentinel
+deflector # or poetry run deflector
 ```
 
 Or defining the directory where the tests are:
 
 ```bash
-sentinel --dir tests
+deflector --dir tests
 ```
 
 ---
 
 ## Features
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/sentinel/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Main
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Main
 
 | Function                                               | Description                               |
 |--------------------------------------------------------|-------------------------------------------|
@@ -94,7 +94,7 @@ sentinel --dir tests
 The `affirm` is used to create tests that validate whether the behavior of your code is as expected, checking the correspondence between values ​​and triggering errors if there are discrepancies.
 
 ```python
-from sentinel import affirm
+from deflector import affirm
 ```
 
 | Function                                   | Description                                  |

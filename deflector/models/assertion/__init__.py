@@ -1,0 +1,1 @@
+from deflector.models.assertion.assertion_error import MyAssertionError as MyAssertionError

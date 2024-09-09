@@ -1,10 +1,10 @@
 import asyncio
 
-from sentinel import affirm
-from sentinel.helpers.after_each import after_each
-from sentinel.helpers.before_each import before_each
-from sentinel.helpers.describe import describe
-from sentinel.helpers.it import it
+from deflector import affirm
+from deflector.helpers.after_each import after_each
+from deflector.helpers.before_each import before_each
+from deflector.helpers.describe import describe
+from deflector.helpers.it import it
 
 
 async def main() -> int:
