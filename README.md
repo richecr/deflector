@@ -1,5 +1,5 @@
 <div align="center">
-<img height="180" alt="deflector Logo" src="https://raw.githubusercontent.com/richecr/deflector/main/.github/assets/readme/logo.png?token=GHSAT0AAAAAACUXVD5PS2OG2TWFS5JTCPQSZWVD4SA">
+<img height="180" alt="deflector Logo" src="https://raw.githubusercontent.com/richecr/deflector/main/.github/assets/readme/logo.png">
 
 # Deflector
 
@@ -15,15 +15,15 @@
 
 💡 **Deflector** is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications.
 
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> High **isolation** level per file<br />
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Performant** and **lightweight**<br />
-</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> **Fully typed** library<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/91367ebe4c1d82e3d86c92647b391fd1840d6c13/.github/assets/readme/check.svg"> High **isolation** level per file<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/91367ebe4c1d82e3d86c92647b391fd1840d6c13/.github/assets/readme/check.svg"> **Performant** and **lightweight**<br />
+</span><img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/91367ebe4c1d82e3d86c92647b391fd1840d6c13/.github/assets/readme/check.svg"> **Fully typed** library<br />
 
 ---
 
 ## Quickstart
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Install
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/91367ebe4c1d82e3d86c92647b391fd1840d6c13/.github/assets/readme/check.svg"> Install
 
 
 ```zsh
@@ -38,7 +38,7 @@ poetry add deflector -G dev
 
 ---
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Test
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/91367ebe4c1d82e3d86c92647b391fd1840d6c13/.github/assets/readme/check.svg"> Test
 
 <table>
 <tr>
@@ -62,7 +62,7 @@ affirm.equal(1, 1, "My first test with deflector")
 
 ---
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Run
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/91367ebe4c1d82e3d86c92647b391fd1840d6c13/.github/assets/readme/check.svg"> Run
 
 
 ```bash
@@ -79,7 +79,7 @@ deflector --dir tests
 
 ## Features
 
-### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/c86802a982bebe45ac32c6dc2a42159ae7cc04f7/.github/assets/readme/check.svg?token=A2BPUWMPOQ5JOPYKMTBF2LDG2UIX2"> Main
+### <img width="16" height="16" alt="check" src="https://raw.githubusercontent.com/richecr/deflector/91367ebe4c1d82e3d86c92647b391fd1840d6c13/.github/assets/readme/check.svg"> Main
 
 | Function                                               | Description                               |
 |--------------------------------------------------------|-------------------------------------------|
