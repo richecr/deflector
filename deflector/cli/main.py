@@ -31,7 +31,12 @@ def main(dir: str = "tests", stderr: int = subprocess.DEVNULL) -> None:
         counter += 1
         out_text = f"{counter}/{total_files}: {path}"
         try:
-            subprocess.run(["python", file], check=True, stderr=stderr)
+            subprocess.run(
+                ["python", file],
+                cwd=os.path.abspath(os.path.join(os.path.dirname(__file__), "..")),
+                check=True,
+                stderr=stderr,
+            )
             console.print_success(f"✔ {out_text}")
         except Exception:
             console.print_error(f"✘ {out_text}")
