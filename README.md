@@ -50,7 +50,7 @@ poetry add deflector -G dev
 <td width="1200">
 
 ```py
-from deflector.modules.essentials.affirm import affirm
+from deflector import affirm
 
 
 affirm.equal(1, 1, "My first test with deflector")
@@ -158,6 +158,8 @@ affirm.does_not_match_re("ab", "abc", "Does Not Match Regex: ab not in a")
 #### It
 
 ```python
+from deflector import affirm, it
+
 @it("It Test 1")
 def test_1() -> None:
     affirm.ok(True, "Ok")
@@ -170,6 +172,8 @@ def test_1() -> None:
 #### Describe
 
 ```python
+from deflector import affirm, describe, it
+
 @describe("Main 1")
 def describe_main() -> None:
     @it("It Test 1")
@@ -184,6 +188,8 @@ def describe_main() -> None:
 #### Before Each • After Each
 
 ```python
+from deflector import affirm, describe, it
+
 @describe("Main 1")
 def describe_main() -> None:
     x = 1
