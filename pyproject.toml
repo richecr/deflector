@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deflector"
-version = "0.1.0"
+version = "0.1.1"
 description = "Deflector is a minimalist testing library for Python designed to simplify test writing with a clear and intuitive syntax, allowing developers to create and run tests quickly and efficiently without unnecessary complications."
 authors = ["Rich Ramalho <richecr1799@gmail.com>"]
 maintainers = ["Rich Ramalho <richecr1799@gmail.com>"]
