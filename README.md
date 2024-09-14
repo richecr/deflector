@@ -4,7 +4,7 @@
 
 ---
 
-📘 [Documentation - Under Construction]()
+📘 [Documentation - Under Construction]() º [Pypi](https://pypi.org/project/deflector/)
 
 </div>
 
