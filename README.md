@@ -1,5 +1,4 @@
 <div align="center">
-<img height="180" alt="deflector Logo" src="https://raw.githubusercontent.com/richecr/deflector/main/.github/assets/readme/logo.png">
 
 # Deflector
 
